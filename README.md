@@ -10,8 +10,9 @@ Sale prices of houses are estimated using most correlated quantitative features.
 The script <code>EDA.ipynb</code> contains Exploratory Data Analysis: dealing with missing values, tranformation of the target variable to the log-scale, detection of the most correlated quantitative features. The script <code>train_test_split.ipynb</code> contains detailed estimation using both models on one particular train-test split. The script <code>stratified_kfold.ipynb</code> contains 70-fold Cross-Validation of both models. All presented splits are stratified on the discretized target variable. 
 
 The module <code>scale_target.py</code> contains a function for:
-* transforming the original target variable (price in dollars) into its scaled logathmic version,
-* keeping the necessary data in memory for inverse transformation.
+* transforming the logathmic target variable into its scaled version,
+* keeping the necessary data in memory for inverse transformation,
+* allowing the inverse transform to be made for inputs of both types Series and DataFrame.  
 
 The module <code>bayesian_linear.py</code> contains a user-friendly interface for the bayesian linear model. It uses the library <code>pymc</code> as backend.
 
